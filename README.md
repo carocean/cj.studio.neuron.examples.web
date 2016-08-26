@@ -8,12 +8,12 @@
 面向连接的工具体系的优势在于，在架构层面，比spring更简单易用，比osgi更省事，比nodejs在服务器端的开发更规范，而且与java共生。它支持搭建像神经网络这样的大型分布式运维环境
 
 	其中的ecm开发工具包兼有spring、osgi、nodejs的功能。支持面向模块开发与部署，热插拔。 	
-	其中的net开发工具包,支持web的开发，并且可以完全使用js开发web应用，它的语法更接近于流行的nodejs，其它实现有基于netty的nio和自行开发的nio框架rio,rio叫响应式nio框架，它即有nio的优势，又有同步等待响应的能力。
+	其中的net开发工具包,支持web的开发，并且可以完全使用js开发web应用，它的语法更接近于流行的nodejs，其它功能包含有基于netty的nio也包含有自行开发的nio框架rio,rio叫响应式nio框架，它即有nio的优势，又有同步等待响应的能力。
 	其中的plus开发工具包，进一步增强了连接的能力，如web应用的插件化（支持像eclipse这样的插件架构），支持像webservice这种远程服务的能力，支持云计算芯片的开发。
-	其中的netdisk是基于mongodb的增加工具，它实现了网盘的各种功能，支持文件存取及结构化数据存取，支持多维，用户配额，开发上类似支持、对象映射支持。
+	其中的netdisk是基于mongodb的增强开发工具包，它实现了网盘的各种功能，支持文件随机存取及结构化数据存取，支持多维，用户配额，开发上类似sql语法支持、对象映射支持。
 	其中的神经元命令行工具，具有像tomcat/jetty等服务容器的功能，更多的是它具有向后连接的特性，是组建大型分布式神经网络的节点工具。它的目的就是组建神经网络集群。
 	其中的mdisk命令行工具，它是以命令行窗口实现的网盘工具，以netdisk为核心，方便mongodb的开发、测试和运维管理。它用起来非常简单，只要连到你的mongodb即可将mongodb当成网盘数据库，且对原mongodb的库不受影响。
-	其中的cjnet 用于调试neuron中的应用程序和netsite中的应用程序，它是一个cj studio中有关net产品开发和调试必不可少的工具。
+	其中的cjnet 用于调试neuron中的应用程序和netsite中的应用程序，它是一个cj studio产品系中有关net产品开发和调试必不可少的工具。
 	其中的netsite也是一个像tomcat/jetty等服务容器的命令行工具，它与神经元的区别在于，它只能部署在神经网络的终端，而不能成为其中间节点。它的优点在于，它可以部署成百上千个应用，而在一个神经元节点上一般不这么做。此工具暂时停止了升级。
 	
 · 介绍： ecm 面向连接电子模型开发工具包 http://cjlns.com/portlets/center/portlet-00002-coding/views/intro_ecm.html
@@ -25,7 +25,17 @@
 · 介绍： mdisk 多维云盘命令行工具 http://www.cjlns.com/portlets/center/portlet-00002-coding/views/intro_mdisk.html
 · 介绍： cjnet 调试、测试命令行工具 http://www.cjlns.com/portlets/center/portlet-00002-coding/views/intro_cjnet.html
 
+入门：
 
+	从ecm 工具包的 helloworld 入门 http://www.cjlns.com/portlets/center/portlet-00002-coding/views/ecm_hello.html
+	从net 工具包的 helloworld 入门 http://www.cjlns.com/portlets/center/portlet-00002-coding/views/net_hello.html
+	神经元连接 helloword 入门 http://www.cjlns.com/portlets/center/portlet-00003-develop/views/neuron_hello.html
+	云计算机的芯片开发过程：helloword 入门 http://www.cjlns.com/portlets/center/portlet-00004-computer/views/computer_hello.html
+
+本工程结构说明：
+	your.crop是根项目，其下的global目录中的cjtools目录放cj studio的相关的开发工具包，runtime目录放cj studio产品系运行必须的依赖包
+	your.crop.examples.main 为测试类项目
+		
 cj studio的产品系列，有一部分遵循apache开源协议的，一部分是开放而暂未开源的，但是均可在商业中免费使用。
 
 	对于开源我是这么看的，许多用户并不关心你的源码，也从来不看，一般都是直接引用jar，反倒开源使他们无从下载，不知从何入手，因此我才没有将那几个开发工具包的源码放上去。但是，对于尚未开源的核心源码，视开发者的呼声，随时都可以放上去。
@@ -40,8 +50,8 @@ cj studio的产品系列，有一部分遵循apache开源协议的，一部分�
 
 源码托管网址(全部同步)：
 * (国外)GitHub: https://github.com/carocean/examples
-* (国外)sourceforge: https://sourceforge.net/projects/cjlns/
-* (国内)开源中国: http://git.oschina.net/
+* (国外)sourceforge: https://sourceforge.net/p/cjlns/examples/ci/master/tree/
+* (国内)开源中国: https://git.oschina.net/carocean/examples
 * (国内)CSDN: https://code.csdn.net/qq_35955798/examples
 
 web开发使用js作为服务的示例：
