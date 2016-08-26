@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 其中class用于硬性指定类的位置，如果为空表示与xml文档的位置和名字一致 -->
+<service id="refXmlServiceByGridge" scope="singleon" class="">
+	<description></description>
+	<!--服务的方法会被桥接出去，桥拥有一个接受列表和拒绝列表，拒绝优先
+		默认isValid="true"
+	-->
+	<property name="byGridge" >
+		<!-- 方法引用是和服务名引用一致的，如果服务名为空，则默认为取当前服务定义中的方法,如果引用的服务不存在桥而配置为使用桥则报错 -->
+		<ref  byName="myXmlService" useBridge="auto" >
+			<!--表示当前引用与服务桥之间的私有连接点，如果省去将使用默认的连接点-->
+			<joinpoint aspects="-myAspect2">
+			</joinpoint>
+		</ref>
+	</property>
+</service>

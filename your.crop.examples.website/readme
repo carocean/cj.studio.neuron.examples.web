@@ -1,0 +1,21 @@
+一般的web应用
+
+该项目需要部署到nueron或netsite上运行
+如果开发的web程序集想部署在诸如tomcat/jetty/weblogic/was等传统web容器上，您需要自行开发，方案有：
+
+1､自已在您的接口项目中实现一个servlet或侦听器作为中央控制器
+2､在中央控制器中加载（或您的传统容器加载您的接口项目时）装载并启动这个web程序集
+3､从程序集中得到您的webgraph
+4、将请求调度给webgraph的input端子
+
+以上伪码：
+servlet match all request url
+assembly a=a.load(file)
+a.start
+inetgraph g=a.workbin.part('your websitegraph')
+ipin input=g.netinput();
+doServlet url head parameters 
+	frame=new httpframe('get url http/1.1')
+	circuit new httpcircuit('http/1.1 200 ok'):
+	input.flow(frame,circuit);
+	response.out(circuit.content().readFully());

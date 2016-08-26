@@ -1,0 +1,23 @@
+{
+    "description":"本服务用于XXX，作者",
+    "serviceId":"myJsonBridge",
+    "class":"",
+    "scope":"singleon",
+    "bridge":{
+        "aspects":"myAspect1",
+        "isValid":"true"
+    },
+    "properties":[
+        {
+            "name":"prop1",
+            "parser":"cj.basic",
+           	"value":"deptment test"
+        },{
+        	"name":"jo",
+        	"refByName":"jsonObject"
+        }
+    ],
+    "methods":[
+    	
+    ]
+}

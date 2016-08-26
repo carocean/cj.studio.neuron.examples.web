@@ -1,0 +1,40 @@
+{
+	entryPoint : {
+		activators : []
+	},
+	assemblyInfo : {
+		assemblyTitle : "chip2",
+		assemblyResource:"/",
+		assemblyDescription : "驿站邻居芯片",
+		assemblyConfiguration : "",
+		assemblyCompany : "",
+		assemblyProduct : "cj.lns.chip2",
+		assemblyCopyright : "Copyright   2011",
+		assemblyTrademark : "",
+		assemblyCulture : "",
+		guid : "A87112A0-7D71-48C5-9584-689FC5E1B783",
+		assemblyVersion : "1.0.0.0",
+		assemblyFileVersion : "1.0.0.0"
+	},
+	global:{
+		default:"zh_CN",
+		desc:"如果系统环境要求各芯片采用的语言本芯片没有，则芯片可采用默认语言"
+		},
+	serviceContainer : {
+		name : "netContainer",
+		switchFilter:"off",
+		jss:[{
+			module:"test",
+			package:"your.crop.examples.chip2.jss",
+			unzip:"true",
+			searchMode:"link",
+			extName:".jss.js"
+		}],
+		scans : [{
+					package : "your.crop.examples.chip2",
+					extName : ".class|.json|.xml",
+					exoterical:"true"
+				}]
+
+	}
+}

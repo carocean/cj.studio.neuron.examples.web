@@ -1,0 +1,19 @@
+{
+    "description":"本服务用于XXX，作者",
+    "serviceId":"MixutureService",
+    "class":"",
+    "scope":"singleon",
+    "properties":[
+    {
+    	"name":"jsonObject",
+    	"refByName":"annoObject2"
+    },{
+    	"name":"age2",
+    	"parser":"cj.basic",
+    	"value":888
+    }
+    ],
+    "methods":[
+    	
+    ]
+}

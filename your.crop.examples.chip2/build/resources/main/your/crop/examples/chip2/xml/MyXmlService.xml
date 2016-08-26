@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 其中class用于硬性指定类的位置，如果为空表示与xml文档的位置和名字一致 
+	默认：isExoteric=false
+-->
+<service id="myXmlService" scope="singleon" class="" constructor="newXmlService">
+	<description></description>
+	<!--服务的方法会被桥接出去，桥拥有一个接受列表和拒绝列表，拒绝优先
+		默认isValid="true"
+	-->
+	<bridge aspects="myAspect1+myAspect3+myAspect2-myAspect3" isValid="true">
+	</bridge>
+	<property name="name">
+		<!--
+		如果采用value元素，则在property下配的其它元素将失效
+		cj.basic:Java基本值注入
+		-->
+		<value parser="cj.basic">fuck you</value>
+	</property>
+	<property name="site">
+		<!-- 注入serviceSite -->
+		<serviceSite></serviceSite>
+	</property>
+	<property name="iocByMyValueParser">
+		<!--
+		演示自定义的值解析器
+		-->
+		<value parser="my.objectParser">new your.crop.examples.chip2.xml.ShowCreateObjectByValueParser();</value>
+	</property>
+	<property name="map">
+		<!--值描述器：可以为属性注入JAVA基本值，也可以注入map,list等数据-->
+		<!--
+		系统固定的值注入器有：
+		cj.basic:Java基本值注入
+		cj.propfile：将Assembly.properties文件中的属性注入
+		cj.jsonList:将json格式的数组注入，要注入的属性必须是集合类型,在其元素中如果要引用服务，请使用$.号＋服务名来引用服务
+		cj.jsonMap：要注入的属性必须是map类型,这些为系统提供的默认格式化器，在其元素中如果要引用服务，请使用$.号＋服务名来引用服务
+		也可自定义：从ValueParser派生，并声明为cj服务，则服务名即为parser名
+		-->
+		<value parser="cj.jsonMap">{"age1":"333","myObject":"$.myAnnoService"}</value>
+	</property>
+	<property name="list">
+		<!--值描述器：可以为属性注入JAVA基本值，也可以注入map,list等数据-->
+		<!--
+		系统固定的值注入器有：
+		cj.basic:Java基本值注入
+		cj.propfile：将Assembly.properties文件中的属性注入
+		cj.jsonList:将json格式的数组注入，要注入的属性必须是集合类型,在其元素中如果要引用服务，请使用$.号＋服务名来引用服务
+		cj.jsonMap：要注入的属性必须是map类型,这些为系统提供的默认格式化器，在其元素中如果要引用服务，请使用$.号＋服务名来引用服务
+		也可自定义：从ValueParser派生，并声明为cj服务，则服务名即为parser名
+		-->
+		<value parser="cj.jsonList">["333","$.myAnnoService"]</value>
+	</property>
+	<property name="service" >
+		<!-- 引用一个服务，为简便就引用当前服务了 -->
+		<ref  byName="myXmlService"></ref>
+	</property>
+	<property name="invertInjectionAnnoService" >
+		<ref  byName="invertInjectionAnnoService"></ref>
+		<invertInjection isForce="true"></invertInjection>
+	</property>
+	<property name="service2" >
+		<!-- 引用一个服务，为简便就引用当前服务了 -->
+		<ref  byMethod="newService2"></ref>
+	</property>
+	<property name="service3" >
+		<!-- 引用一个服务，为简便就引用当前服务了 -->
+		<ref  byMethod="newService3"></ref>
+	</property>
+	<!-- 声明一个方法绑定到构造函数，声明的本服务的构造默认执行此方法 -->
+	<!-- 如果bind属性没有或bind=""则视为构造函数或指定bind为<init>，当然在xml中得转义，可以输入&lt;init&gt;即：<init> ，且返回节点失效	-->
+	<!-- 如果方法有参数则argTypes不能省，要准确匹配，否则找不到方法。没有参数则可省去 -->
+	<method  alias="newXmlService"  bind=""  argTypes="int">
+		<arg value="333" ></arg><!-- value,ref -->
+	</method>
+	<method  alias="newService2"  bind="newService" argTypes="java.lang.String,java.lang.String,your.crop.examples.chip2.json.MyJsonService"    >
+		<arg value="433aa4" ></arg><!-- value,ref -->
+		<arg value="test232" ></arg>
+		<arg ref="myJsonService"></arg>
+		<!-- result 如果没有属性，则按返回的实例的类型搜索服务定义注入。 如果有服务定义ID，则将返回对象作为该定义的实例注入.
+		如果为空，则尝试以方法返回类型在服务定义中搜索。二者选一或都指定或为空都行 ，如果服务不存在或非返回类型则方法仍被执行，但返回的实例不会被注入
+		建议指明返回的服务定义id，如果不指定将以返回类型在容器中查找，损耗性能。
+		-->
+		<result byDefinitionId=""  byDefinitionType=""></result>
+	</method>
+	<!-- 演示重载方法和空参数方法 -->
+	<method  alias="newService3"  bind="newService"  >
+	</method>
+</service>

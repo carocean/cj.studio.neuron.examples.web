@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="myAspect2" scope="singleon" class="">
+	<description>此为自动代理，自动代理拦载符合的所有服务</description>
+	<property name="interfaces"></property>
+	<property name="pattern">
+		<value parser="cj.jsonList">["my.*\.test*","\w+Name\.test"]</value>
+	</property>
+</service>
