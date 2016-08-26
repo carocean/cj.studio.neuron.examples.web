@@ -1,11 +1,8 @@
 关键词：j2ee,java,nodejs,osgi,jsp,struts,spring,spring mvc,mongodb,radis,zookeeper,netty,mina,jetty,tomcat,weblogic,websphere,orm,cloud,nashron,jdk
 
-本例程源自：http://www.cjlns.com
-
-	云网平台，是以面向连接编程实现的，从架构到部署均采用了连接体系。
-
+	（官网：http://cjlns.com)
  《面向连接编程》http://www.cjlns.com/portlets/center/portlet-00001-show/views/ecm.html
- 
+
 	面向连接编程是一个完整的工具体系,从web的mvc到持久层，从开发工具到分布式部署，从本地工具到远程服务容器，一套完整的开发和部署体系，从而可以使用户摆脱那种拼拼补补的开发现状和运维状况。
 	
 面向连接的工具体系的优势在于，在架构层面，比spring更简单易用，比osgi更省事，比nodejs在服务器端的开发更规范，而且与java共生。它支持搭建像神经网络这样的大型分布式运维环境
@@ -37,14 +34,15 @@ cj studio的产品系列，有一部分遵循apache开源协议的，一部分�
 
 最新消息在两个地方发布：
 1. 云网官方网站：http://www.cjlns.com，发布产品消息，提供在线演示，交流相关技术，分享互联网创业经验，欢迎访问。
+	云网平台本身就是以面向连接编程实现的神经网络集群，从架构到部署均采用了神经元的连接体系，共有5台机，从前置神经元机－应用神经元机－中间神经元机连接起来的分布式网络。
+	除了云网平台用了面向连接编程体系，还用到了至少5个项目之中。
 2. 每日源码更新动态，可以通过 Github 自带的动态消息 查看
 
 源码托管网址(全部同步)：
 * (国外)GitHub: https://github.com/carocean/examples
-* (国外)codeproject: http://www.codeproject.com
-* (国外)sourceforge: http://www.sourceforge.com
+* (国外)sourceforge: https://sourceforge.net/projects/cjlns/
 * (国内)开源中国: http://git.oschina.net/
-* (国内)CSDN: https://code.csdn.net/
+* (国内)CSDN: https://code.csdn.net/qq_35955798/examples
 
 web开发使用js作为服务的示例：
 
