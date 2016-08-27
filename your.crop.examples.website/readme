@@ -19,3 +19,4 @@ doServlet url head parameters
 	circuit new httpcircuit('http/1.1 200 ok'):
 	input.flow(frame,circuit);
 	response.out(circuit.content().readFully());
+	
