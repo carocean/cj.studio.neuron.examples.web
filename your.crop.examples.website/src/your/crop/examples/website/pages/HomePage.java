@@ -18,7 +18,9 @@ public class HomePage extends Page {
 	public void doPage(Frame frame,Circuit circuit, IPlug plug, PageContext ctx)
 			throws CircuitException {
 		Document doc = ctx.html("/index.html", "utf-8");
+		//演示为表单赋值
+		doc.select(".a>ul>li[name]>input[name]").attr("value","小哈哈");
+		doc.select(".a>ul>li[age]>input[name]").attr("value","4");
 		circuit.content().writeBytes(doc.toString().getBytes());
 	}
-
 }

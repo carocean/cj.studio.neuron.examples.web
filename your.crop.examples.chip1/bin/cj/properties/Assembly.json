@@ -1,0 +1,43 @@
+/*
+ * 开放类型的三种方法：
+ * 1.在Assembly.json中声明开放的包
+ * 2.通过package-info.java文件声明开放的包
+ * 3.指定某个类型开放，即在类名前加@CjExotericalType,当然使用xml,json来注解是一样的
+ */
+ //入口点是程序集装载后要执行的点。
+{
+	entryPoint : {
+		activators : [{
+				name : '测试活动器',
+				class : 'your.crop.examples.chip1.Chip1Activator',
+				parameters:{name:'forTest'}
+			}]
+	},
+	assemblyInfo : {
+		assemblyTitle : "chip1",
+		assemblyResource:"/",
+		assemblyDescription : "驿站邻居芯片",
+		assemblyConfiguration : "",
+		assemblyCompany : "",
+		assemblyProduct : "cj.lns.chip1",
+		assemblyCopyright : "Copyright   2011",
+		assemblyTrademark : "",
+		assemblyCulture : "",
+		guid : "A87232A0-7D71-48C5-5467-689FC5E1B783",
+		assemblyVersion : "1.0.0.0",
+		assemblyFileVersion : "1.0.0.0"
+	},
+	global:{
+		default:"zh_CN",
+		desc:"如果系统环境要求各芯片采用的语言本芯片没有，则芯片可采用默认语言"
+		},
+	serviceContainer : {
+		name : "netContainer",
+		scans : [{
+					package : "your.crop.examples.chip1",
+					extName : ".class|.json",
+					exoterical:"false"
+				}]
+
+	}
+}

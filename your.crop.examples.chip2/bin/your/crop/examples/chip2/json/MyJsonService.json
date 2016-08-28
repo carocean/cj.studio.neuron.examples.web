@@ -1,0 +1,100 @@
+//默认:isExoteric=false
+{
+	"description": "本服务用于XXX，作者",
+	"serviceId": "myJsonService",
+	"class": "",
+	"scope": "singleon",
+	"constructor":"newJsonService",
+	"bridge": {
+		"aspects": "",
+		"isValid": "false"
+	},
+	"properties": [
+		{
+			"name": "deptment",
+			"refByName": "deptment"
+		},
+		{
+			"name": "byBridge",
+			"refByName": "myJsonBridge",
+			"refByBridge": {
+				"useBridge": "auto",
+				"joinpoint": {
+					"aspects": "+myAspect3"
+				}
+			},
+			"invertInjection":"true"
+		},
+		{
+			"name":"list",
+			"parser":"cj.jsonList",
+			"value":["333","$.myAnnoService"]
+		},
+		{
+			"name":"map",
+			"parser":"cj.jsonMap",
+			"value":{"age1":"333","myObject":"$.myAnnoService"}
+		},
+		{
+			"name":"iocByMyValueParser",
+			"parser":"my.objectParser",
+			"value":"new your.crop.examples.chip2.xml.ShowCreateObjectByValueParser();"
+		},
+		{
+			"name":"site",
+			"serviceSite":"true"
+		},{
+			"name":"byMethod2",
+			"refByMethod":"newService2"
+		},{
+			"name":"byMethod1",
+			"refByMethod":"newService"
+		}
+	],
+	"methods": [
+		{
+    		"alias":"newJsonService",
+    		"bind":"<init>",
+    		"argTypes":"int,your.crop.examples.chip2.json.IMyJsonBridge",
+    		"args":[
+                {
+                    "value":"6666"
+               	},
+                {
+                	"ref":"myJsonBridge"
+               	}
+           	]
+    	},{
+    		"alias":"newService",
+    		"bind":"newService",
+    		"argTypes":"",
+    		"args":[
+           	],
+           	"result":{
+           		"byDefinitionId":"",
+           		"byDefinitionType":""
+           	}
+    	},{
+    		"alias":"newService2",
+    		"bind":"newService",
+    		"argTypes":"java.lang.String",
+    		"args":[
+    			{"value":"kiviv"}
+           	],
+           	"result":{
+           		"byDefinitionId":"myJsonBridge",
+           		"byDefinitionType":""
+           	}
+    	},{
+    		"alias":"newService",
+    		"bind":"newService",
+    		"argTypes":"",
+    		"result":{
+           		"byDefinitionId":"",
+           		"byDefinitionType":""
+           	},
+    		"args":[
+           	]
+    	}
+	]
+}

@@ -1,0 +1,11 @@
+{
+    "description":"本服务用于XXX，作者",
+    "serviceId":"jsonObject",
+    "class":"",
+    "scope":"singleon",
+    "properties":[
+    ],
+    "methods":[
+    	
+    ]
+}

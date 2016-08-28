@@ -1,7 +1,6 @@
 package your.crop.examples.net.nswitch;
 
 import cj.studio.ecm.annotation.CjService;
-
 import cj.studio.ecm.frame.Circuit;
 import cj.studio.ecm.frame.Frame;
 import cj.studio.ecm.frame.IFeedback;
@@ -15,8 +14,8 @@ import cj.studio.ecm.net.IConnectCallback;
 import cj.studio.ecm.net.IRioClientCloseEvent;
 import cj.studio.ecm.net.graph.INetGraph;
 import cj.studio.ecm.net.nio.NetConstans;
-import cj.studio.ecm.net.rio.local.LocalClientSwitch;
-import cj.studio.ecm.net.rio.local.LocalServerSwitch;
+import cj.studio.ecm.net.rio.local.NswitchClientSwitch;
+import cj.studio.ecm.net.rio.local.NswitchServerSwitch;
 /**
  * 注：对应用netty实现的LocalNettyServer,LocalNettyClient与用法与此类似，但对持响应式的支持性能没有rio的好
  * @author carocean
@@ -28,7 +27,7 @@ public class TestRioSwitch {
 	public void testNswitch()
 			throws InterruptedException, CircuitException {
 
-		LocalServerSwitch nswitchs = new LocalServerSwitch();
+		NswitchServerSwitch nswitchs = new NswitchServerSwitch();
 		nswitchs.setProperty("workThreadCount", "2");
 		nswitchs.start("8080");
 		nswitchs.buildNetGraph().netOutput().plugLast("test", new ISink() {
@@ -54,7 +53,7 @@ public class TestRioSwitch {
 			}
 		});
 		
-		LocalClientSwitch nswitchc = new LocalClientSwitch();
+		NswitchClientSwitch nswitchc = new NswitchClientSwitch();
 		nswitchc.setProperty("workThreadCount", "4");
 		nswitchc.connect("localhost", "8080", new IConnectCallback() {
 

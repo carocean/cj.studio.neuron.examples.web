@@ -1,0 +1,16 @@
+{
+    "description":"本服务用于XXX，作者",
+    "serviceId":"myAspect3",
+    "class":"",
+    "scope":"singleon",
+    "properties":[
+        {
+            "name":"pattern",
+            "parser":"cj.jsonList",
+          	"value":['test*']
+        }
+    ],
+    "methods":[
+    	
+    ]
+}
