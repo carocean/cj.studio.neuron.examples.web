@@ -36,12 +36,13 @@ subprojects {
     uploadArchives {
 	    repositories {
 	       flatDir {
-	           dirs file('../release')
+	           dirs file('release')
 	       }
     	}
 
 	}
 }
+
 task releaseEcm(){
 	doLast {
 			println 'ecm 环境发布完毕!'

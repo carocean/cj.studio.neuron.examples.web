@@ -4,7 +4,7 @@ sourceSets {
 	 		srcDir "$projectDir/src"
 	 	}
 	 	resources{
-		 	srcDir "$projectDir/src"
+		 	srcDir "$projectDir/site-src"
 		 }
 	 } 
  	}
@@ -24,13 +24,19 @@ dependencies {
 	compile fileTree('../global/cjtools')
 	compile fileTree('src/cj/references')//编译和运行时的依赖库，如果将来在神经元或netsite中运行的话，则不必将ecm,net等工具包放入该目录
 }
-     task releaseToBuild(type: Copy){
+     task releaseToNeuron(type: Copy){
       dependsOn "build"
 	     from 'build/libs/'
-	     into '../build/your.crop.examples.website'
+	     into '../network/neuron-1.0/apps'
+	     include '**/*.jar'
+     }
+     task releaseToNetSite(type: Copy){
+      dependsOn "build"
+	     from 'build/libs/'
+	     into '../network/netsite-1.0/apps'
 	     include '**/*.jar'
      }
      task release(type:Copy){
-      dependsOn "releaseToBuild"
+      dependsOn "releaseToNeuron","releaseToNetSite"
      }
      

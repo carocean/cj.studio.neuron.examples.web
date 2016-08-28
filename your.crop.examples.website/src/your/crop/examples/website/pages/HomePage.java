@@ -12,23 +12,12 @@ import cj.studio.ecm.net.web.page.context.PageContext;
 
 //import cj.studio.ecm.net.web.sink.WebSocketServerIndexPage;
 
-@CjService(name = "/pages/")
+@CjService(name = "/index.html")
 public class HomePage extends Page {
 	@Override
 	public void doPage(Frame frame,Circuit circuit, IPlug plug, PageContext ctx)
 			throws CircuitException {
-		// TODO Auto-generated method stub
-		ClassLoader cl = Thread.currentThread().getContextClassLoader();
-		System.out.println(cl);
-		System.out.println("home service:");
-		System.out.println(plug.site().getProperty("http.root"));
-		String path = "ws://" + frame.head("Host") + "/"
-				+ circuit.attribute("select-name")
-				+ circuit.attribute("websocket-path") + "/widgets/";
-		// ByteBuf content = WebSocketServerIndexPage.getContent(path);
-		// circuit.content().writeBytes(content);
-		// content.release();
-		Document doc = ctx.html("/index.html", "gbk");
+		Document doc = ctx.html("/index.html", "utf-8");
 		circuit.content().writeBytes(doc.toString().getBytes());
 	}
 

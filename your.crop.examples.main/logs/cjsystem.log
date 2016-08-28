@@ -131,3 +131,6 @@
 2016年08月24日 02:10:45  错误: cj.studio.ecm.container.factory.SingleonServiceInstanceFactory - 服务:chip2main构建失败，原因：java.lang.IllegalArgumentException: Can not set your.crop.examples.chip2.anno.IAnnoService field your.crop.examples.chip2.Chip2Main.myAnnoService to cj.studio.ecm.adapter.IAdaptable$$EnhancerByCGLIB$$3b002bc8
 2016年08月24日 02:19:14  错误: cj.studio.ecm.container.factory.SingleonServiceInstanceFactory - 服务:chip2main构建失败，原因：java.lang.IllegalArgumentException: Can not set your.crop.examples.chip2.anno.IAnnoService field your.crop.examples.chip2.Chip2Main.myAnnoService to cj.studio.ecm.adapter.IAdaptable$$EnhancerByCGLIB$$3b002bc8
 2016年08月24日 02:25:59  错误: cj.studio.ecm.container.factory.SingleonServiceInstanceFactory - 服务:refXmlServiceByGridge构建失败，原因：java.lang.RuntimeException: cj.ultimate.net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InvocationTargetException-->null
+2016年08月28日 22:21:01  错误: cj.studio.ecm.net.nio.netty.http.HttpHandlerBinder - 404 资源文件不存在:/error/error_404.html
+2016年08月28日 22:22:18  错误: cj.studio.ecm.net.nio.netty.http.HttpHandlerBinder - 404 资源文件不存在:/error/error_404.html
+2016年08月28日 22:31:07  错误: cj.studio.ecm.net.nio.netty.http.HttpHandlerBinder - 404 资源文件不存在:/error/error_404.html
