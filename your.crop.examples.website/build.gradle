@@ -30,13 +30,8 @@ dependencies {
 	     into '../network/neuron-1.0/apps'
 	     include '**/*.jar'
      }
-     task releaseToNetSite(type: Copy){
-      dependsOn "build"
-	     from 'build/libs/'
-	     into '../network/netsite-1.0/apps'
-	     include '**/*.jar'
-     }
+     
      task release(type:Copy){
-      dependsOn "releaseToNeuron","releaseToNetSite"
+      dependsOn "releaseToNeuron"
      }
      

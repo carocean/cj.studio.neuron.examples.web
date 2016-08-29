@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>演示website的开发</title>
 <script type="text/javascript" src="js/jquery/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/socket.io.js"></script>
 </head>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -20,9 +21,46 @@ $(document).ready(function(){
 		},function(data){
 			alert(data);
 		}).error(function(e){
-			alert(e);
+			alert(e.responseText);
 		});
+	});
+	
+	
+	var wsurl='ws://localhost:9999/website/wssite';
+	var onmessage=function(frame){
+		$('.async>li>textarea').val(frame.content);
+	}
+	var onopen=function(){
+		alert('websocket opened');
+	}
+	var onclose=function(){
+			alert('websocket closed');
+		}
+	var onerror=function(e){
+		console.log(e);
+		alert(e);
+	}
+	var ws=$.ws.open(wsurl, onmessage, onopen, onclose,onerror);
+	$("input[name='ws.async']").on('click',function(){
+		var text = $('.async>li>textarea').val();
+		// var
+		var frame = 'command=read\r\nurl=/\r\nprotocol=do/1.1\r\n\r\n\r\n'
+		+ text;
+		//var frame = text.value;
+		ws.send(frame);
+	}).error(function(e){
+		alert(e.responseText);
 	})
+	$("input[name='ws.sync']").on('click',function(){
+		var text = $('.async>li>textarea').val();
+		var frame = 'command=read\r\nurl=/read3\r\nprotocol=do/1.1\r\n\r\n\r\n'
+		+ text;
+		//var frame = text.value;
+		ws.send(frame);
+	}).error(function(e){
+		alert(e.responseText);
+	})
+	
 });
 </script>
 <body>
@@ -52,16 +90,11 @@ $(document).ready(function(){
 		<input type="button" name="submit" value="ajax提交">
 	</div>
 	<div>
-		<p>websocket异步通讯</p>
-		<ul>
-			<li></li>
+		<p>websocket提交</p>
+		<ul class="async">
+			<li><textarea></textarea></li>
 		</ul>
-	</div>
-	<div>
-		<p>websocket同步捎带通讯</p>
-		<ul>
-			<li></li>
-		</ul>
+		<input type="button" name="ws.async" value="websocket提交，通过jsswidget"><input type="button" name="ws.sync" value="websocket提交，通过javawidget">
 	</div>
 	<div>
 		<a href="./pages/jsspage.html">跳转到静态页</a>

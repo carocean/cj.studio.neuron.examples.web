@@ -45,4 +45,5 @@ exports.doPage = function(frame,circuit, plug, ctx) {
 	
 	var printEcho=site.getService('printEcho');
 	printEcho.printEcho('这是调用java服务neuron，java服务的方法可以直接在jss中调用');
+	circuit.content().writeBytes('<p>在控制台查看</p>'.getBytes());
 }

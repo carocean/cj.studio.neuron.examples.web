@@ -48,11 +48,11 @@ cj studio的产品系列，有一部分遵循apache开源协议的，一部分�
 	除了云网平台用了面向连接编程体系，还用到了至少5个项目之中。
 2. 每日源码更新动态，可以通过 Github 自带的动态消息 查看
 
-源码托管网址(全部同步)：
-* (国外)GitHub: https://github.com/carocean/examples
-* (国外)sourceforge: https://sourceforge.net/p/cjlns/examples/ci/master/tree/
-* (国内)开源中国: https://git.oschina.net/carocean/examples
-* (国内)CSDN: https://code.csdn.net/qq_35955798/examples
+	源码托管网址(全部同步)：
+	* (国外)GitHub: https://github.com/carocean/examples
+	* (国外)sourceforge: https://sourceforge.net/p/cjlns/examples/ci/master/tree/
+	* (国内)开源中国: https://git.oschina.net/carocean/examples
+	* (国内)CSDN: https://code.csdn.net/qq_35955798/examples
 
 web开发使用js作为服务的示例：
 
