@@ -49,7 +49,7 @@ The latest news released in two places:
 
 The source web site hosting (full synchronization):
 
-    (foreign) GitHub: Https://github.com/carocean/examples
+    (foreign) GitHub: https://github.com/carocean/lns
     (foreign) sourceforge: Https://sourceforge.net/p/cjlns/examples/ci/master/tree/
     (domestic) open source Chinese: Https://git.oschina.net/carocean/examples
     (domestic) CSDN: Https://code.csdn.net/qq_35955798/examples
