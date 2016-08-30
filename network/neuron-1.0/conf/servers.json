@@ -1,1 +1,1 @@
-{"httpSite":{"protocol":"http","port":"9999","props":{"bossThreadCount":"1","heartbeatInterval":"1000","workThreadCount":"0"}}}
+{"httpSite":{"protocol":"rio-http","port":"9999","props":{"bossThreadCount":"1","heartbeatInterval":"1000","workThreadCount":"0"}}}
