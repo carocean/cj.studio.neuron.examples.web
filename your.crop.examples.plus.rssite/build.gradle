@@ -4,7 +4,7 @@ sourceSets {
 	 		srcDir "$projectDir/src"
 	 	}
 	 	resources{
-		 	srcDir "$projectDir/site-src"
+		 	srcDir "$projectDir/src"
 		 }
 	 } 
  	}
@@ -27,7 +27,7 @@ dependencies {
      task releaseToNeuron(type: Copy){
       dependsOn "build"
 	     from 'build/libs/'
-	     into '../network/neuron-1.0/apps/your.crop.examples.website'
+	     into '../network/neuron-1.0/apps/your.crop.examples.plus.rssite'
 	     include '**/*.jar'
      }
      

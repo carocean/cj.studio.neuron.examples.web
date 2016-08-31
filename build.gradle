@@ -54,4 +54,5 @@ releaseEcm.dependsOn ':your.crop.examples.net:release'
 releaseEcm.dependsOn ':your.crop.examples.chip1:release'
 releaseEcm.dependsOn ':your.crop.examples.chip2:release'
 releaseEcm.dependsOn ':your.crop.examples.website:release'
+releaseEcm.dependsOn ':your.crop.examples.plus.rssite:release'
 tasks.getByPath(':your.crop.examples.ecm:release').mustRunAfter tasks.getByPath(':your.crop.examples.common:release')

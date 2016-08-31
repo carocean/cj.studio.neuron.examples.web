@@ -1666,3 +1666,6 @@
 		at java.lang.Thread.run(Thread.java:745)
 2016年08月29日 20:15:10  错误: cj.studio.ecm.net.nio.netty.http.HttpHandlerBinder - 404 未找到相应进程处理该请求：GET /apple-touch-icon-precomposed.png HTTP/1.1
 2016年08月29日 20:15:10  错误: cj.studio.ecm.net.nio.netty.http.HttpHandlerBinder - 404 未找到相应进程处理该请求：GET /apple-touch-icon.png HTTP/1.1
+2016年08月31日 22:23:19  错误: cj.studio.ecm.net.rio.http.HttpServerHandler - 404 未找到相应进程处理该请求：GET /js/jquery/jquery-2.1.4.js HTTP/1.1
+2016年08月31日 22:23:19  错误: cj.studio.ecm.net.rio.http.HttpServerHandler - 404 未找到相应进程处理该请求：GET /js/socket.io.js HTTP/1.1
+2016年08月31日 22:23:19  错误: cj.studio.ecm.net.rio.http.HttpServerHandler - 404 未找到相应进程处理该请求：GET /js/socket.io.js HTTP/1.1
