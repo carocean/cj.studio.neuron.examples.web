@@ -41,7 +41,7 @@ exports.doPage = function(frame,circuit, plug, ctx) {
 	print(params);
 	
 	var doc = ctx.html("/pages/response.html", "utf-8");
-	//使用类似jquery的语法来为dom fu zhi，我操他妈哩个比的汉字，打字这么难。
+	//使用类似jquery的语法来为dom fu zhi
 	doc.select('.response>span[name]').html(params.name);
 	doc.select('.response>span[age]').html(params.age);
 	
