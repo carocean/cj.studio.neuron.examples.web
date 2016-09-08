@@ -18,7 +18,7 @@ sourceSets {
  } 
 
 dependencies {
-	//compile project(':your.crop.project.xx');//指定你要依赖的你公司的其它项目
+	compile project(':cj.studio.jpa');//指定你要依赖的你公司的其它项目
 	compile group: 'org.jsoup', name: 'jsoup', version: '1.8.1'
 	compile fileTree('../global/runtime')
 	compile fileTree('../global/cjtools')

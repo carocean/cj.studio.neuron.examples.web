@@ -38,6 +38,10 @@
 					package : "your.crop.examples.website",
 					extName : ".class|.json|.xml",
 					exoterical:"true"
+				},{
+					package : "cj.studio.jpa",
+					extName : ".class|.json|.xml",
+					exoterical:"true"
 				}]
 
 	}

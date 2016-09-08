@@ -35,7 +35,7 @@
 		name : "netContainer",
 		scans : [{
 					package : "your.crop.examples.chip1",
-					extName : ".class|.json",
+					extName : ".class|.json|.xml",
 					exoterical:"false"
 				}]
 

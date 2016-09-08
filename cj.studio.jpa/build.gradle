@@ -1,0 +1,37 @@
+sourceSets { 
+	 main { 
+	 	java{
+	 		srcDir "$projectDir/src"
+	 	}
+	 	resources{
+		 	srcDir "$projectDir/src"
+		 }
+	 } 
+ 	}
+ 	sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+ 	tasks.withType(JavaCompile) {  
+        options.encoding = "UTF-8"  
+    } 
+ repositories { 
+	 flatDir(dirs: "../global/runtime") 
+ } 
+
+dependencies {
+	//compile project(':your.crop.project.xx');//指定你要依赖的你公司的其它项目
+	compile('org.eclipse.persistence:org.eclipse.persistence.jpa:2.6.1');
+	compile fileTree('../global/runtime')
+	compile fileTree('../global/cjtools')
+	compile fileTree('src/cj/references')//编译和运行时的依赖库，如果将来在神经元或netsite中运行的话，则不必将ecm,net等工具包放入该目录
+}
+     task releaseToNeuron(type: Copy){
+      dependsOn "build"
+	     from 'build/libs/'
+	     into '../your.crop.examples.website/src/cj/refembeds'
+	     include '**/*.jar'
+     }
+     
+     task release(type:Copy){
+      dependsOn "releaseToNeuron"
+     }
+     
