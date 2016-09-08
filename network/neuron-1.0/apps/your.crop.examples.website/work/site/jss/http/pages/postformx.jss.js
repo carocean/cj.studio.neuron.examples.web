@@ -51,10 +51,10 @@ exports.doPage = function(frame, circuit, plug, ctx) {
 	// 1.通过头注入
 	print('这是采用jss头注入的服务：' + imports.head.services.userDao);
 	print('这是采用jss头注入的服务：' + imports.head.services.jssUserDao);
-	var users=imports.head.services.jssUserDao.getUsers();
-	for (var i = 0; i < users.size(); i++) {
-		print('演示在jss中访问数据库:' + users.get(i));
-	}
+//	var users=imports.head.services.jssUserDao.getUsers();
+//	for (var i = 0; i < users.size(); i++) {
+//		print('演示在jss中访问数据库:' + users.get(i));
+//	}
 	// 2.通用的获取方法是：chip.site();
 	var site = chip.site();
 	print('这是通过chip站点获取服务' + site.getService('userDao'));

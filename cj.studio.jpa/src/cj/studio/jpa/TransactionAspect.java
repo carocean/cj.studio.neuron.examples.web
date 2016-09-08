@@ -61,6 +61,10 @@ public class TransactionAspect implements IAspect {
 			if (tran.isActive())
 				tran.rollback();
 			throw e1;
+		}finally{
+			if(e!=null){
+				e.close();
+			}
 		}
 	}
 
