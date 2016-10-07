@@ -1,1 +1,1 @@
-{}
+{"name":{"name":"name","alias":"京东","algorithm":"cjhash","accept":"jd","channelType":"unicast","match":"netName","shared":{},"validDestinations":{"jd1":{"name":"jd1","protocol":"rio-http","inetHost":"http://www.jd.com","useShared":false,"port":"80","props":{}}},"invalidDestinations":{}}}

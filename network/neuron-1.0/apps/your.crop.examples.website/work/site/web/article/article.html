@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>演示文章的开发</title>
+<script type="text/javascript" src="../js/jquery/jquery-2.1.4.js"></script>
+<style type="text/css">
+body {
+	padding: 0;
+	margin: 0;
+}
+
+ul>li {
+	list-style: none;
+}
+
+.header {
+	height: 30px;
+	background: #ececec;
+}
+
+.tools {
+	
+}
+
+.tools>ul {
+	float: right;
+}
+
+.tools>ul>li {
+	float: left;
+	margin-left: 20px;
+}
+
+.layout {
+	width: 1110px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.tools>ul>li:hover {
+	color: red;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.columns {
+	
+}
+
+.columns>li {
+	float: left;
+	padding: 0 10px;
+}
+
+.columns>li[title] {
+	width: 250px;
+	cursor: pointer;
+}
+
+.columns>li[title]:hover {
+	text-decoration: underline;
+}
+
+.columns>li[ctime] {
+	width: 80px;
+}
+
+.columns>li[creator] {
+	width: 80px;
+}
+
+.rows>.header, .rows>.row {
+	margin-bottom: 10px;
+	position: relative;
+	border-bottom: 1px solid #ececec;
+}
+
+.del {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	cursor: pointer;
+	padding: 2px 10px;
+	display: none;
+}
+
+.del:hover {
+	background: #ececec;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.rows>.row').hover(function() {
+			$(this).find('.del').toggle();
+		}, function() {
+			$(this).find('.del').toggle();
+		})
+	})
+</script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="tools layout">
+		<ul>
+			<li categories><select>
+					<option key='id1'>中国</option>
+					<option key='id2'>日本</option>
+			</select></li>
+			<li news><span>新建</span></li>
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+	<div class="table layout">
+		<ul class="rows">
+			<li class="header">
+				<ul class="columns">
+					<li title><span>标题</span></li>
+					<li ctime><span>发布时间</span></li>
+					<li creator><span>创建者</span></li>
+				</ul>
+				<div style="clear: both;"></div>
+			</li>
+			<li class="row">
+				<ul class="columns">
+					<li title><span>江东山的事</span></li>
+					<li ctime><span>23:23</span></li>
+					<li creator><span>cj</span></li>
+				</ul>
+				<div style="clear: both;"></div> <span class="del">X</span>
+			</li>
+			<li class="row">
+				<ul class="columns">
+					<li title><span>江东山的事</span></li>
+					<li ctime><span>23:23</span></li>
+					<li creator><span>cj</span></li>
+				</ul>
+				<div style="clear: both;"></div> <span class="del">X</span>
+			</li>
+			<li class="row">
+				<ul class="columns">
+					<li title><span>江东山的事</span></li>
+					<li ctime><span>23:23</span></li>
+					<li creator><span>cj</span></li>
+				</ul>
+				<div style="clear: both;"></div> <span class="del">X</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

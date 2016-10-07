@@ -1,1 +1,1 @@
-{"httpSite":{"protocol":"rio-http","port":"9999","props":{"bossThreadCount":"1","heartbeatInterval":"1000","workThreadCount":"0"}}}
+{"jd":{"protocol":"rio-http","inetHost":"localhost","port":"8081","props":{"bossThreadCount":"1","heartbeatInterval":"1000","workThreadCount":"4"}},"httpSite":{"protocol":"rio-http","inetHost":"localhost","port":"9991","props":{"bossThreadCount":"1","heartbeatInterval":"1000","workThreadCount":"4"}}}

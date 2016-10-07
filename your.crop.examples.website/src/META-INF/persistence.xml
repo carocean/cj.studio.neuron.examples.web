@@ -5,6 +5,8 @@
 	<persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>your.crop.examples.website.bo.UserBO</class>
+		<class>your.crop.examples.website.bo.CategoryBO</class>
+		<class>your.crop.examples.website.bo.ArticleBO</class>
 		<!-- 可以有多个jar-file元素 经验证：jar-file只是用于解析注解类元数据，可能是以temp类加载器解析成元数据，它并没有装载正式上下文中， 
 			因此：可以在任何芯片存取或读取模型。当然，如果你在db芯片中有一个模型类型，同时在b芯片中也有同样路径的模型类型， 则：b通过db调用该模型时实际加载的是db的类型，因此在b中转换出错。而如果db中无此类型，则b使用该模型正常。 
 			测试：如果不用jar-file指向元数据则报错，如果指向了jar-file而在调用者中未有此类型而查询此实体时也报错。 由于它仅是加载了实体模型的元数据，因此在查询时，必须在调用者芯片中声明一样全路径名的模型类型，否则报错。 
