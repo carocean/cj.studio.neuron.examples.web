@@ -6,4 +6,6 @@ import your.crop.examples.website.bo.CategoryBO;
 
 public interface ICategoryDAO {
 	List<CategoryBO> getAll();
+
+	CategoryBO get(String id);
 }

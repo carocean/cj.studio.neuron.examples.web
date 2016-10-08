@@ -55,7 +55,7 @@ public class ArticleDAO implements IArticleDAO,IEntityManagerable{
 	public List<ArticleBO> getArticlesByCategory(String id) {
 		String hql="select c from ArticleBO c where c.category=:category";
 		TypedQuery<ArticleBO> q=em.createQuery(hql,ArticleBO.class);
-		q.setParameter("category", id);
+		q.setParameter("category", new BigInteger(id));
 		return q.getResultList();
 	}
 

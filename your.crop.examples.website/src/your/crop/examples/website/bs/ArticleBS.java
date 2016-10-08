@@ -42,7 +42,10 @@ public class ArticleBS implements IArticleBS{
 	public List<ArticleBO> getArticlesByCategory(String id) {
 		return articleDAO.getArticlesByCategory(id);
 	}
-
+	@Override
+	public CategoryBO getCategory(String id){
+		return categoryDAO.get(id);
+	}
 	@Override
 	public List<CategoryBO> getCategories() {
 		// TODO Auto-generated method stub

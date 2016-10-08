@@ -13,4 +13,5 @@ public interface IArticleBS {
 	List<ArticleBO> getAllArticles();
 	List<ArticleBO> getArticlesByCategory(String id);
 	List<CategoryBO> getCategories();
+	CategoryBO getCategory(String id);
 }
