@@ -1,7 +1,10 @@
 package cj.studio.jpa;
 
+import java.lang.reflect.Field;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceContext;
 
 import cj.lns.chip.sos.service.framework.IPersistenceFactory;
 import cj.studio.ecm.EcmException;
@@ -20,8 +23,6 @@ import cj.studio.ecm.bridge.ICutpoint;
  * －用于拦截在dao层中的方法，为之添加事务
  * －用 @cjBridge声明方面，或用xml,json方式
  * 
- * 约束：
- * －使用者必须实现IEntityManager接口
  * </pre>
  * 
  * @author carocean
@@ -31,7 +32,6 @@ import cj.studio.ecm.bridge.ICutpoint;
 public class TransactionAspect implements IAspect {
 	@CjServiceRef(refByName = "persistenceFactory")
 	IPersistenceFactory factory;
-
 	public TransactionAspect() {
 	}
 
@@ -45,15 +45,16 @@ public class TransactionAspect implements IAspect {
 		IAdaptable a = (IAdaptable) bridge;
 		IPrototype pt = a.getAdapter(IPrototype.class);
 		Object b = pt.unWrapper();
-		if (!(b instanceof IEntityManagerable)) {
-			throw new EcmException("必须实现IEntityManagerable。" + b.getClass().getName());
+		Field field=findPersistenceContext(b.getClass());
+		if(field==null){
+			throw new EcmException(String.format("类：%s 未发现注解：@PersistenceContext", b.getClass()));
 		}
-		IEntityManagerable em = (IEntityManagerable) b;
 		EntityManager e = factory.getFactory(p.unitName()).createEntityManager();
+		
+		setPersistenceContext(b,field,e);
 		EntityTransaction tran = e.getTransaction();
 		try {
 			tran.begin();
-			em.setEntityManager(e);
 			Object ret = point.cut(bridge, args);
 			tran.commit();
 			return ret;
@@ -66,6 +67,27 @@ public class TransactionAspect implements IAspect {
 				e.close();
 			}
 		}
+	}
+
+	private Field findPersistenceContext(Class<?> c) {
+		Field[] arr = c.getDeclaredFields();
+		for(Field f:arr	){
+			PersistenceContext pc=f.getAnnotation(PersistenceContext.class);
+			if(pc!=null)return f;
+		}
+		if (!c.equals(Object.class)){
+			return findPersistenceContext(c.getSuperclass());
+		}
+		return null;
+	}
+
+	private void setPersistenceContext(Object b, Field f, EntityManager e) {
+		try {
+			f.setAccessible(true);
+			f.set(b, e);
+		} catch (Exception e1) {
+			throw new EcmException(e1);
+		} 
 	}
 
 	@Override

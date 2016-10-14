@@ -1,0 +1,57 @@
+
+0    [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/work/modules/neuron/sinks。
+8    [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/work/modules/neuron/sinks。
+681  [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/plugins/cj.lns.chip.sns.neuron.plugin.basic/work/modules/plugins/broadcaster。
+689  [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/plugins/cj.lns.chip.sns.neuron.plugin.basic/work/modules/plugins/broadcaster。
+1072 [main] INFO  cj.studio.ecm.script.JssServiceInstanceFactory  - 发现web芯片website-1.0.0.0，尝试解压
+1081 [main] INFO  cj.studio.ecm.script.JssServiceInstanceFactory  - 解压web芯片website-1.0.0.0，到：
+/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/site
+1082 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/modules/test/your/crop/examples/website/jss。
+1086 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/site/jss/ws。
+1118 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/modules/test/your/crop/examples/website/jss。
+1150 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/site/jss/http。
+1423 [main] INFO  cj.studio.ecm.net.web.WebSiteGraph  - webSiteGraph[chipName:website]已初始化...
+——————————————使用说明——————————————
+       如不记得命令，可用man命令查询
+__________________________________
+
+[0;31m >[0;32m[EL Warning]: connection: 2016-10-14 12:34:42.709--java.lang.NullPointerException
+[EL Info]: 2016-10-14 12:34:43.243--ServerSession(780988378)--EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150916-55dc7c3
+[EL Info]: connection: 2016-10-14 12:34:43.855--ServerSession(780988378)--/file:/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/your.crop.examples.website-1.0.jar_test login successful
+[EL Warning]: transaction: 2016-10-14 12:34:44.0--UnitOfWork(209149395)--The class RepeatableWriteUnitOfWork is already flushing. The query will be executed without further changes being written to the database.  If the query is conditional upon changed data the changes may not be reflected in the results.  Users should issue a flush() call upon completion of the dependent changes and prior to this flush() to ensure correct results.
+
+0    [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/work/modules/neuron/sinks。
+9    [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/work/modules/neuron/sinks。
+486  [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/plugins/cj.lns.chip.sns.neuron.plugin.basic/work/modules/plugins/broadcaster。
+493  [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/plugins/cj.lns.chip.sns.neuron.plugin.basic/work/modules/plugins/broadcaster。
+1072 [main] INFO  cj.studio.ecm.script.JssServiceInstanceFactory  - 发现web芯片website-1.0.0.0，尝试解压
+1082 [main] INFO  cj.studio.ecm.script.JssServiceInstanceFactory  - 解压web芯片website-1.0.0.0，到：
+/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/site
+1083 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/modules/test/your/crop/examples/website/jss。
+1087 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/site/jss/ws。
+1135 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/modules/test/your/crop/examples/website/jss。
+1177 [main] INFO  cj.studio.ecm.script.JssModule  - 解压到jss模块目录,
+	位置：/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/work/site/jss/http。
+1481 [main] INFO  cj.studio.ecm.net.web.WebSiteGraph  - webSiteGraph[chipName:website]已初始化...
+——————————————使用说明——————————————
+       如不记得命令，可用man命令查询
+__________________________________
+
+[0;31m >[0;32m[EL Warning]: connection: 2016-10-14 12:35:26.572--java.lang.NullPointerException
+[EL Info]: 2016-10-14 12:35:27.075--ServerSession(1603361840)--EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150916-55dc7c3
+[EL Info]: connection: 2016-10-14 12:35:27.718--ServerSession(1603361840)--/file:/Users/carocean/studio/examples/network/neuron-1.0/apps/your.crop.examples.website/your.crop.examples.website-1.0.jar_test login successful
