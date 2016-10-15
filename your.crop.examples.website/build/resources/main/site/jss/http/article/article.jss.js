@@ -3,7 +3,7 @@
  * 作者：赵向彬
  * 说明：services是声明本jss要引用的服务
  * <![jss:{
-		scope:'runtime',
+		scope:'singleon',
 		extends:'',
 		filter:{
 	 	}
