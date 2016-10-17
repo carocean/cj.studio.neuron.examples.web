@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>演示文章的开发</title>
+<script type="text/javascript" src="../js/jquery/jquery-2.1.4.js"></script>
+<link href="../css/article.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/article.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="layout">
+			<a href="../webpart/article/article.html">webpart插件</a>
+		</div>
+	</div>
+	<div class="tools layout">
+		<ul>
+			<li categories><select>
+					<option key='id1'>中国</option>
+					<option key='id2'>日本</option>
+			</select></li>
+			<li news><span>新建</span></li>
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+	<div class="panel layout">
+		<ul>
+			<li title><span label>标题：</span><input></li>
+			<li category><span label>分类：</span><select><option
+						key="c1">分类1</select></li>
+			<li creator><span label>创建者：</span><input></li>
+			<li cnt><span label>内容：</span><br>
+			<textarea></textarea></li>
+		</ul>
+		<div class="op">
+			<span save>保存</span> <span cancel>取消</span>
+		</div>
+	</div>
+	<div class="table layout">
+		<ul class="rows">
+			<li class="header">
+				<ul class="columns">
+					<li title><span>标题</span></li>
+					<li ctime><span>发布时间</span></li>
+					<li creator><span>创建者</span></li>
+				</ul>
+				<div style="clear: both;"></div>
+			</li>
+			<li class="row">
+				<ul class="columns">
+					<li title><span>江东山的事</span></li>
+					<li ctime><span>23:23</span></li>
+					<li creator><span>cj</span></li>
+				</ul>
+				<div style="clear: both;"></div> <span class="del">X</span>
+			</li>
+			<li class="row">
+				<ul class="columns">
+					<li title><span>江东山的事</span></li>
+					<li ctime><span>23:23</span></li>
+					<li creator><span>cj</span></li>
+				</ul>
+				<div style="clear: both;"></div> <span class="del">X</span>
+			</li>
+			<li class="row">
+				<ul class="columns">
+					<li title><span>江东山的事</span></li>
+					<li ctime><span>23:23</span></li>
+					<li creator><span>cj</span></li>
+				</ul>
+				<div style="clear: both;"></div> <span class="del">X</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

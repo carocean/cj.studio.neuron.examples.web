@@ -1,6 +1,5 @@
 package cj.studio.jpa;
 
-import cj.lns.chip.sos.service.framework.annotation.CjRemoteMethod;
 import cj.studio.ecm.CJSystem;
 import cj.studio.ecm.annotation.CjService;
 import cj.studio.ecm.bridge.IAspect;
@@ -26,10 +25,9 @@ public class LoggingAspect implements IAspect {
 
 	@Override
 	public Object cut(Object bridge, Object[] args, ICutpoint point) {
-		CjRemoteMethod p = point.getMethodAnnotation(CjRemoteMethod.class);
 		CjTransaction t = point.getMethodAnnotation(CjTransaction.class);
 		CjLogging l = point.getMethodAnnotation(CjLogging.class);
-		if (p == null&&t==null&&l==null) {
+		if (t==null&&l==null) {
 			return point.cut(bridge, args);
 		}
 		try {

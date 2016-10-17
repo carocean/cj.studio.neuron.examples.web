@@ -1,5 +1,5 @@
 #org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
-#Sat Oct 15 11:46:37 CST 2016
-build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;cj.studio.jpa;your.crop.examples.chip1;your.crop.examples.chip2;your.crop.examples.common;your.crop.examples.ecm;your.crop.examples.main;your.crop.examples.net;your.crop.examples.plus.rssite;your.crop.examples.website;
+#Mon Oct 17 14:41:48 CST 2016
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;cj.studio.jpa;cj.test.jeewebhost;cj.test.jeewebpart;cj.test.jeewebsite;your.crop.examples.chip1;your.crop.examples.chip2;your.crop.examples.common;your.crop.examples.ecm;your.crop.examples.main;your.crop.examples.net;your.crop.examples.plus.rssite;your.crop.examples.website;
 org.springsource.ide.eclipse.gradle.linkedresources=
 org.springsource.ide.eclipse.gradle.rootprojectloc=

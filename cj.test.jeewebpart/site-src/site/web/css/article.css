@@ -1,0 +1,131 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+ul>li {
+	list-style: none;
+}
+
+.header {
+	height: 30px;
+	background: #ececec;
+}
+
+.tools {
+	
+}
+
+.tools>ul {
+	float: right;
+}
+
+.tools>ul>li {
+	float: left;
+	margin-left: 20px;
+}
+
+.layout {
+	width: 1110px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.tools>ul>li:hover {
+	color: red;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.columns {
+	
+}
+
+.columns>li {
+	float: left;
+	padding: 0 10px;
+}
+
+.columns>li[title] {
+	width: 250px;
+	cursor: pointer;
+}
+
+.columns>li[title]:hover {
+	text-decoration: underline;
+}
+
+.columns>li[ctime] {
+	width: 140px;
+}
+
+.columns>li[creator] {
+	width: 80px;
+}
+.rows>.header{
+	padding-top:9px;
+	position: relative;
+	border-bottom: 1px solid #ececec;
+}
+ .rows>.row {
+	padding:15px 0;
+	position: relative;
+	border-bottom: 1px solid #ececec;
+}
+
+.del {
+	position: absolute;
+	top: 50%;
+	margin-top:-7px;
+	right: 10px;
+	cursor: pointer;
+	padding: 2px 10px;
+	display: none;
+}
+
+.del:hover {
+	background: #ececec;
+}
+.panel{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: none;
+}
+.panel>ul>li{
+	margin: 5px 10px;
+}
+.panel>ul>li>span[label]{
+	color: gray;
+	display: inline-block;
+	width: 80px;
+}
+.panel>ul>li input{
+	padding: 4px 8px;
+	width: 80%;
+}
+.panel>ul>li option{
+padding: 4px 8px;
+}
+.panel>ul>li select{
+	padding: 4px 8px;
+	width: 80%;
+}
+.panel>ul>li textarea{
+	padding: 8px 8px;
+	width: 80%;
+	display: inline-block;
+	margin-left: 80px;
+	resize:none;
+}
+.op{
+	text-align: center;
+}
+.op>span{
+	display: inline-block;
+	padding: 2px 10px;
+	background: #f5f5f5;
+	cursor: pointer;
+}
+.op>span:hover{
+	background: #ececec;
+}

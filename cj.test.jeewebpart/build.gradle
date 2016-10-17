@@ -1,0 +1,40 @@
+sourceSets { 
+	 main { 
+	 	java{
+	 		srcDir "$projectDir/src"
+	 	}
+	 	resources{
+		 	srcDir "$projectDir/site-src"
+		 }
+	 } 
+ 	}
+ 	sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+ 	tasks.withType(JavaCompile) {  
+        options.encoding = "UTF-8"  
+    } 
+ repositories { 
+	 flatDir(dirs: "../global/lib") 
+ } 
+
+dependencies {
+	compile group: 'org.jsoup', name: 'jsoup', version: '1.8.1'
+	compile project(':cj.studio.jpa');//指定你要依赖的你公司的其它项目
+	compile fileTree('../global/runtime')
+	compile fileTree('../global/cjtools')
+	compile fileTree('src/cj/references')
+	compile fileTree('../global/jee.runtime')
+}
+task releaseToHost(type: Copy) {
+ dependsOn "build"
+ from 'build/libs/'
+ into '../cj.test.jeewebhost/WebContent/WEB-INF/assembly/plugins/webpart-1'
+ include '**/*.jar'
+  rename { String fileName ->
+        fileName.replace('.jar', '.plugin')//修改，使之输出为插件的扩展名。
+    	}
+ }
+ 
+ task release(type:Copy){
+  dependsOn "releaseToHost"
+ }

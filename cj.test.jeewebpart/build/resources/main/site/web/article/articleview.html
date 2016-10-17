@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/article.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../js/jquery/jquery-2.1.4.js"></script>
+<style type="text/css">
+.panel{
+	display: block;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.op>span[back]').on('click',function(e){
+		window.location.href='article.html';
+	})
+})
+</script>
+</head>
+<body>
+	<div class="panel layout">
+		<ul>
+			<li title=""><span label="">标题：</span></li>
+			<li ctime=""><span label="">时间：</span></li>
+			<li category=""><span label="">分类：</span></li>
+			<li creator=""><span label="">创建者：</span></li>
+			<li cnt=""><span label="">内容：</span>
+			</li>
+		</ul>
+		<div class="op"><span back>返回</span></div>
+	</div>
+
+</body>
+</html>

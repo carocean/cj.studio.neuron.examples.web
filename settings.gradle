@@ -3,4 +3,4 @@ include "your.crop.examples.ecm","your.crop.examples.net","your.crop.examples.ch
 include "your.crop.examples.main"
 include "your.crop.examples.website","your.crop.examples.plus.rssite"
 include "cj.studio.jpa"
-
+include "cj.test.jeewebhost","cj.test.jeewebsite","cj.test.jeewebpart"
